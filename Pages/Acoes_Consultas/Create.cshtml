@@ -1,0 +1,64 @@
+﻿@page
+@model Clinica_Veterinaria_3.Pages.Acoes_Consultas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Consulta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Consulta.DataConsulta" class="control-label"></label>
+                <input asp-for="Consulta.DataConsulta" class="form-control" />
+                <span asp-validation-for="Consulta.DataConsulta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consulta.QuemAgendou" class="control-label"></label>
+                <input asp-for="Consulta.QuemAgendou" class="form-control" />
+                <span asp-validation-for="Consulta.QuemAgendou" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consulta.Cliente" class="control-label"></label>
+                <input asp-for="Consulta.Cliente" class="form-control" />
+                <span asp-validation-for="Consulta.Cliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consulta.Nome_Animal" class="control-label"></label>
+                <input asp-for="Consulta.Nome_Animal" class="form-control" />
+                <span asp-validation-for="Consulta.Nome_Animal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consulta.Historico_Animal" class="control-label"></label>
+                <input asp-for="Consulta.Historico_Animal" class="form-control" />
+                <span asp-validation-for="Consulta.Historico_Animal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consulta.Medico" class="control-label"></label>
+                <input asp-for="Consulta.Medico" class="form-control" />
+                <span asp-validation-for="Consulta.Medico" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Consulta.PresencaCliente" /> @Html.DisplayNameFor(model => model.Consulta.PresencaCliente)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

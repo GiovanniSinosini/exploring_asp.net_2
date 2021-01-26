@@ -1,0 +1,61 @@
+﻿@page
+@model Clinica_Veterinaria_3.Pages.Acoes_Consultas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Consulta</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.DataConsulta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.DataConsulta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.QuemAgendou)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.QuemAgendou)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Cliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Cliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Nome_Animal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Nome_Animal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Historico_Animal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Historico_Animal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.PresencaCliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.PresencaCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Medico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Medico)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Consulta.Id_Consulta">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

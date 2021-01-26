@@ -1,0 +1,64 @@
+﻿@page
+@model Clinica_Veterinaria_3.Pages.Acoes_Consultas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Consulta</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.DataConsulta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.DataConsulta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.QuemAgendou)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.QuemAgendou)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Cliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Cliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Nome_Animal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Nome_Animal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Historico_Animal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Historico_Animal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.PresencaCliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.PresencaCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consulta.Medico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consulta.Medico)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Consulta.Id_Consulta" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
